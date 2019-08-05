@@ -22,7 +22,19 @@
 
 ## 截图
 
-![0](https://user-images.githubusercontent.com/324764/41385028-c1329666-6fab-11e8-8052-eb8d863cb766.png)
+![0](https://github.com/whs5280/tp_blog/blob/master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190805234806.png)
+
+
+![0](https://github.com/whs5280/tp_blog/blob/master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190805234847.png)
+
+
+![0](https://github.com/whs5280/tp_blog/blob/master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190805234850.png)
+
+
+![0](https://github.com/whs5280/tp_blog/blob/master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190805234854.png)
+
+
+![0](https://github.com/whs5280/tp_blog/blob/master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190805234858.png)
 
 ## 环境需求
 
