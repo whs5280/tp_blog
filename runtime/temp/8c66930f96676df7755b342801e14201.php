@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:23:"themes\index\index.html";i:1482461739;s:26:"themes\\header\header.html";i:1482413546;s:24:"themes\\right\right.html";i:1482719769;s:26:"themes\\footer\footer.html";i:1482388149;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:23:"themes\index\index.html";i:1565015079;s:26:"themes\\header\header.html";i:1482413546;s:24:"themes\\right\right.html";i:1565015110;s:26:"themes\\footer\footer.html";i:1565017689;}*/ ?>
 ﻿<!DOCTYPE html>
 <html lang="zh-cn">
 <head>		
@@ -186,7 +186,7 @@ $(document).ready(function(){
 									</div>
 								</div>
 								<br />
- <?php endforeach; endif; else: echo "" ;endif; ?>	
+ <?php endforeach; endif; else: echo "" ;endif; ?>
 						<!----------------------------------------------------------------->
 						 <?php if(is_array($article_list) || $article_list instanceof \think\Collection): if( count($article_list)==0 ) : echo "暂时没有数据" ;else: foreach($article_list as $key=>$vo): ?>
 							<div class="clearfix articlebox">
@@ -287,23 +287,7 @@ $(document).ready(function(){
 </form>
 	</div>
 	<br /><hr />
-	<div>
-		<h3><span class="icon-cloud-download"></span> 程序下载</h3>
-		<br />
-		<div class="tool">
-			<h4><span>站点版本：weimei v1.52 beta1.0</span></h4>
-			<h4><span>开源版本：weimei v1.52.20161220</span>
-			<a href=""><button id="download" class="button button-little bg-red"> &nbsp;&nbsp;下&nbsp;载 &nbsp;&nbsp;</button></a>
-				
-			<br />
-			
-			<h4><span>本次更新（20161220）</span></h4>
-			<h4><span>1.修复火狐浏览器上传图片失败报302错误的问题。<br/>
-2.修复程序在二级目录下后台登录背景不显示的问题。</span></h4>
-		</div>
-	</div>
-	<br />
-	<hr />
+
 	<div>
 		<h3><span class="icon-wrench"></span> 我的标签</h3>
 		
@@ -425,7 +409,7 @@ $(document).ready(function(){
 			
         </div>
         <div class="text-center height-big">
-            Copyright © 2014 - 2016  <?php echo $site_config['site_copyright']; ?>  & 版权所有&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/" class="foot-my" target="_blank"><?php echo $site_config['site_icp']; ?></a>        |<a href="/index.php/admin/" target="_blank"> 博客管理  </a>
+            Copyright © 2016 - 2019  <?php echo $site_config['site_copyright']; ?>  & 版权所有&nbsp;&nbsp;&nbsp;<a href="http://www.wanghangsheng.cn/" class="foot-my" target="_blank"><?php echo $site_config['site_icp']; ?></a>        |<a href="/index.php/admin/" target="_blank"> 博客管理  </a>
         |<?php echo $site_config['site_tongji']; ?>
         </div>
     </div>

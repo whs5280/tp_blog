@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:20:"themes\so\index.html";i:1482461329;s:26:"themes\\header\header.html";i:1482413546;s:24:"themes\\right\right.html";i:1482566425;s:26:"themes\\footer\footer.html";i:1482388149;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:20:"themes\so\index.html";i:1482461329;s:26:"themes\\header\header.html";i:1482413546;s:24:"themes\\right\right.html";i:1565015110;s:26:"themes\\footer\footer.html";i:1482388149;}*/ ?>
 ﻿<!DOCTYPE html>
 <html lang="zh-cn">
 <head>		
@@ -227,8 +227,8 @@ $(document).ready(function(){
 			登录</button>&nbsp;&nbsp;&nbsp;&nbsp;
 			
 			<?php if(strtoupper(session('user_nickname')) == ''): ?>
-			<!--<a class="button bg" href="http://www.cn300.cn/API/QQ/?url=<?=urlencode('http://'.$_SERVER['HTTP_HOST'].'/index.php/base/qqlogin/')?>"><img height="20px" src="__public__/images/qq.png" /> QQ登录</a>-->
-			<a class="button bg" href="/base/qlogin/"><img height="20px" src="__public__/images/qq.png" /> QQ登录</a>
+			<a class="button bg" href="http://www.cn300.cn/API/QQ/?url=<?=urlencode('http://'.$_SERVER['HTTP_HOST'].'/index.php/base/qqlogin/')?>"><img height="20px" src="__public__/images/qq.png" /> QQ登录</a>
+			
 			
 			<?php else: ?>
 					<div class="button-group">
@@ -247,23 +247,7 @@ $(document).ready(function(){
 </form>
 	</div>
 	<br /><hr />
-	<div>
-		<h3><span class="icon-cloud-download"></span> 程序下载</h3>
-		<br />
-		<div class="tool">
-			<h4><span>站点版本：weimei v1.52 beta1.0</span></h4>
-			<h4><span>开源版本：weimei v1.52.20161220</span>
-			<a href=""><button id="download" class="button button-little bg-red"> &nbsp;&nbsp;下&nbsp;载 &nbsp;&nbsp;</button></a>
-				
-			<br />
-			
-			<h4><span>本次更新（20161220）</span></h4>
-			<h4><span>1.修复火狐浏览器上传图片失败报302错误的问题。<br/>
-2.修复程序在二级目录下后台登录背景不显示的问题。</span></h4>
-		</div>
-	</div>
-	<br />
-	<hr />
+
 	<div>
 		<h3><span class="icon-wrench"></span> 我的标签</h3>
 		
