@@ -1,0 +1,170 @@
+<div class="xl12 xm4">
+	<div>
+		<h3><span class="icon-user"></span> 用户登录</h3>
+		<br />
+		<form method="post" class="form-x form-auto">
+	<div class="form-group">
+		<div class="label">
+			<label for="username">
+				用户名</label>
+		</div>
+		<div class="field">
+			<input type="text" class="input input-auto" id="username" name="username" size="30" data-validate="required:必填" placeholder="手机/邮箱/账号" />
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="label">
+			<label for="detail">
+				密&nbsp;&nbsp;码</label>
+		</div>
+		<div class="field">
+			<input type="text" class="input input-auto" id="username" name="username" size="30" data-validate="required:必填" placeholder="密码" />
+		</div>
+	</div>
+	<div class="form-button">
+		<button class="button bg-blue" type="submit">
+			登录</button>&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			{if condition="strtoupper(session('user_nickname')) eq ''"}
+			<a class="button bg" href="http://www.cn300.cn/API/QQ/?url=<?=urlencode('http://'.$_SERVER['HTTP_HOST'].'/index.php/base/qqlogin/')?>"><img height="20px" src="__public__/images/qq.png" /> QQ登录</a>
+			
+			
+			{else /}
+					<div class="button-group">
+					<button type="button" class="button">
+						<img height="20px" src="__public__/images/qq.png" />  {:session('user_nickname')} </button>
+					<button type="button" class="button dropdown-toggle">
+						<span class="downward"></span>
+					</button>
+					<ul class="drop-menu">
+						<li><a href="{:url('/base/qqlogin/out')}">退出登录</a> </li>					
+					</ul>
+				</div>
+				{/if}
+			
+	</div>
+</form>
+	</div>
+	<br /><hr />
+	<div>
+		<h3><span class="icon-cloud-download"></span> 程序下载</h3>
+		<br />
+		<div class="tool">
+			<h4><span>站点版本：weimei v1.52 beta1.0</span></h4>
+			<h4><span>开源版本：weimei v1.52.20161220</span>
+			<a href=""><button id="download" class="button button-little bg-red"> &nbsp;&nbsp;下&nbsp;载 &nbsp;&nbsp;</button></a>
+				
+			<br />
+			
+			<h4><span>本次更新（20161220）</span></h4>
+			<h4><span>1.修复火狐浏览器上传图片失败报302错误的问题。<br/>
+2.修复程序在二级目录下后台登录背景不显示的问题。</span></h4>
+		</div>
+	</div>
+	<br />
+	<hr />
+	<div>
+		<h3><span class="icon-wrench"></span> 我的标签</h3>
+		
+		<h4>
+			<div class="tag-ul">
+			
+			    {foreach name="tags" item="vo" key="i"}
+			 <a class="button button-little {$vo.tagname|rand_color} shake-hover" href="/index/so/index.html?key={$vo.tagname}">{$vo.tagname}</a>  
+			 {/foreach}	
+             </div>			
+		</h4>
+	</div>
+	<hr />
+	<h2 class="bg-main text-white padding">随机文章</h2>
+	<div class="padding-big bg">
+		<ul class="list-media list-underline">
+		
+		{foreach name="randarticle" item="vo" key="i"}
+			         <li>					
+					<div class="media media-x img-small">						
+						<a class="float-left" href="{:url('article/index','id='.$vo['id'])}">{if condition="strtoupper($vo['thumb']) neq ''"}<img src="{$vo.thumb}" onerror="this.src='__public__images/default_thumb.png'"  class="radius" />
+{else /}<img src="__public__images/default_thumb.png" class="radius"/>
+{/if}</a>						
+						<div class="media-body">
+							<strong> {$vo.title}</strong>{$vo.introduction}
+							<a class="button button-little border-red swing-hover" href="{:url('article/index','id='.$vo['id'])}">查看详情</a>
+						</div>
+					</div>						
+				</li>
+				{/foreach}	
+				</ul>
+	</div>
+	<br />
+	<div class="tab border-main" data-toggle="hover" style="height: 470px;">
+		<div class="tab-head">
+
+			<ul class="tab-nav">
+				<li class="active"><a href="#tab-start2">最新留言</a> </li>
+				<li><a href="#tab-css2">最多点击</a> </li>
+				<li><a href="#tab-units2">申请友链</a> </li>
+			</ul>
+		</div>
+		<div class="tab-body ">
+			<div class="tab-panel active" id="tab-start2">				
+				{foreach name="messageinfo" item="vo"}
+								<div class="panel-group" style="border-top: solid 0px #ddd;">
+						<div class="media media-x">
+							<a class="float-left" href="/Liuyan/index.html">
+														{if condition="strtoupper($vo['headimgurl']) neq ''"}<img src="{$vo.headimgurl}" class="radius-circle" width="60px" height="60px">
+{else /}<img src="__public__images/default_thumb.png" class="radius"/>
+{/if}
+							</a>
+							<div class="media-body">
+								<strong><span class="icon-paper-plane"></span>  {$vo.nickname}</strong>
+								<span class="tag bg-dot">{$vo.os}</span> {php}echo htmlspecialchars_decode($vo['content']){/php}
+							</div>
+						</div>
+					</div>
+					 {/foreach}	
+												
+			</div>
+			<div class="tab-panel" id="tab-css2" >
+				   {foreach name="htorticle" item="vo"}
+				    <li style="margin-bottom:8px"><h4><a href="{:url('article/index','id='.$vo['id'])}"><span class="icon-leaf"></span> {$vo.title}</a></h4></li>
+			      {/foreach}	
+		       <li style="margin-bottom:8px"></li>
+			   </div>
+			<div class="tab-panel" id="tab-units2">												
+				<div class="panel-body">
+					正在开发中，敬请期待。。。。
+				</div>									
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3><span class="icon-retweet"></span> 友情链接</h3>
+		<br />
+		<div class="links">
+		    {foreach name="links" item="vo"}
+			<a href="{$vo.linkurl}" target="_blank" class="button border-blue" role="button">{$vo.linkname}</a>&nbsp;
+			 {/foreach}	
+			</div>
+	</div>
+	<br />
+	<hr />
+	<br />
+	
+</div>
+
+	<script>
+	
+		$(function(){
+		    $('#download').click(function(){
+		    	var node ="{:session('user_nickname')}";
+
+		    	if( node =='' || node == null){ 
+					layer.alert("请您使用QQ登录后下载!",{icon: 5,}); 
+					return false;
+				}
+
+				 return true;
+		    });		    
+		})
+
+	</script>

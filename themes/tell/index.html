@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>		
+	<title>说说-{$site_config.site_title}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="__public__css/lunbo.css" />
+	<link rel="stylesheet" href="__public__css/pintuer.css">
+	<link rel="stylesheet" href="__public__css/my.css">
+	<link rel="stylesheet" href="__public__css/page_css.css">	
+	<link rel="stylesheet" href="__public__css/gotop.css" />
+	<script src="__public__js/jquery.js"></script>
+	<script src="__public__js/pintuer.js"></script>
+	<script src="__public__js/respond.js"></script>
+	<script src="__public__layer/layer.js"></script>
+	<script src="__public__js/gotop.js" ></script>
+	<script src="__public__js/jquery.touchSlider.js"></script>
+</head>
+	<body>
+{include file="/header/header"} 
+		<div class="container">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="/" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">说说</a></li>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+						
+						 {foreach name="tell_list" item="vo" empty="暂时没有数据<br />"}
+							<div class="clearfix articlebox">
+									<div class="detail_a">
+										<div class="said_time">
+											<span class="icon-paper-plane">&nbsp;{$vo.create_time}	&nbsp;&nbsp;</span>
+											<span class="tag bg-dot">{$vo.os}</span>&nbsp;&nbsp;<span class="icon-map-marker"></span>&nbsp;{$vo.position}										</div>
+									</div>
+									<div class="said_img">
+									
+									{if condition="strtoupper($vo['headimgurl']) neq ''"}<img src="{$vo.headimgurl}" data-toggle="hover" data-place="right" title="作者：[ {$vo.username} ]" class="radius-circle tips" width="60px" height="60px" />
+{else /}<img src="__public__images/default_thumb.png" class="radius-circle tips" width="60px" height="60px" />
+{/if}
+																		
+										<div class="said_c">
+											<p>{php}echo htmlspecialchars_decode($vo['tellcontent']){/php}</p>										</div>
+									</div>
+								</div>
+								<br />
+							    {/foreach}	
+												
+							<br />							
+						</div>						
+						<hr />
+						<div class="pages" style=" text-align: right;">
+							 {$tell_list->render()}						</div>
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>	
+					
+				
+{include file="/right/right"} 	
+			</div>
+		</div>	
+
+{include file="/footer/footer"} 		
+
+	</body>
+</html>

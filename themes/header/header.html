@@ -1,0 +1,115 @@
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 600,//轮播播放速度，单位是毫秒
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 4000); //轮播间隔时间，单位是毫秒
+	
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},4000);
+	});
+	
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 4000);
+	});
+	
+});
+</script>
+		<div style="display: none;" id="rocket-to-top">
+    <div style="opacity:0;display: block;" class="level-2"></div>
+    <div class="level-3"></div>
+</div>
+<div class="demo-nav padding-big-top fixed">
+	<div class="container padding-top padding-bottom">
+		<div class="line">
+			<div class="xl12 xs3 xm3 xb2">
+				<button class="button icon-navicon float-right" data-target="#header-demo"></button>
+				<a href="/"><img src="__public__images/logo.png" class="ring-hover"/></a>
+			</div>
+			<div class=" xl12 xs9 xm9 xb10 nav-navicon" id="header-demo">
+				<div class="xs8 xm6 xb8 padding-small">
+					<ul class="nav nav-menu nav-inline nav-big">
+						  <li{if condition="strtoupper(strlen($currenturl)) eq '1'"} class="l_active"{/if}><a href="/">首页</a></li>
+						<li{php}if(strstr($currenturl,'category'))echo' class="l_active"'{/php}>
+							<a href="#">分类<span class="arrow"></span></a>
+							<ul class="drop-menu">
+							 {foreach name="category" item="vo"}
+								<li><a href="{:url('category/index','cid='.$vo['id'])}">{$vo.name}</a></li>
+						       {/foreach}
+							</ul>
+						</li>
+						 {foreach name="nav" item="vo"}
+						 <li{php}if(strstr($currenturl,$vo['link']))echo' class="l_active"'{/php}><a href="/{$vo.link}">{$vo.name}</a></li>
+						  {/foreach}
+			
+					</ul>
+				</div>
+				<div class="xs4 xm3 xb4">
+					   <form class="layui-form layui-form-pane" action="/index/so/index.html" method="get">
+
+						<div class="input-group padding-little-top">
+							<input type="text" class="input border-main" name="key" size="30" placeholder="请输入关键词" />
+							<span class="addbtn"><button class="button bg-main icon-search layui-btn"></button></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="main_visual">
+	<div class="flicking_con">
+	 {foreach name="banner" item="vo"}<a href="#">{$vo.id}</a>{/foreach}
+	</div>
+	<div class="main_image">
+		<ul>
+	{foreach name="banner" item="vo"}
+	<li><span class="img"><img src="{$vo.adpic}"  width="100%" height="400px"/></span></li>
+	{/foreach}
+		</ul>
+		<a href="javascript:;" id="btn_prev"></a>
+		<a href="javascript:;" id="btn_next"></a>
+	</div>
+</div>
+		<br />

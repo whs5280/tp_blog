@@ -1,0 +1,61 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/advertising/index')}">广告管理</a></li>
+            <li class=""><a href="{:url('admin/advertising/add')}">添加广告</a></li>
+            <li class="layui-this">编辑广告</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form form-container" action="{:url('admin/advertising/update')}" method="post">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="adname" value="{$advertising.adname}" required  lay-verify="required" placeholder="请输入广告名称" class="layui-input">
+                        </div>
+                    </div>
+              
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告地址</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="adurl" value="{$advertising.adurl}" placeholder="请输入广告地址 http://" class="layui-input">
+                        </div>
+                    </div>
+					
+					     <div class="layui-form-item">
+                        <label class="layui-form-label">广告图片</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="thumb" value="{$advertising.adpic}" class="layui-input layui-input-inline" id="thumb">
+                            <input type="file" name="file" class="layui-upload-file">
+                        </div>
+                    </div>
+					
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="status" value="1" title="启用" {if condition="$advertising.status==1"} checked="checked"{/if}>
+                            <input type="radio" name="status" value="0" title="禁用" {if condition="$advertising.status==0"} checked="checked"{/if}>
+                        </div>
+                    </div>
+					     <div class="layui-form-item">
+                        <label class="layui-form-label">排序</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="sort" value="{$advertising.sort}" required  lay-verify="required" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="hidden" name="id" value="{$advertising.id}">
+                            <button class="layui-btn" lay-submit lay-filter="*">更新</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

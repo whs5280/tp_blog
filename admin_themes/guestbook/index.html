@@ -1,0 +1,70 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">留言管理</li>
+        </ul>
+        <div class="layui-tab-content">
+
+            <form class="layui-form layui-form-pane" action="{:url('admin/guestbook/index')}" method="get">
+  
+                <div class="layui-inline">
+                    <label class="layui-form-label">关键词</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="keyword" value="{$keyword}" placeholder="请输入关键词" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <button class="layui-btn"><i class="layui-icon">&#xe615;</i> 搜索</button>
+                </div>
+            </form>
+            <hr>
+
+            <form action="" method="post" class="ajax-form">
+                <button type="button" class="layui-btn layui-btn-small ajax-action" data-action="{:url('admin/guestbook/toggle',['type'=>'audit'])}"><i class="layui-icon">&#xe643;</i> 审核</button>
+                <button type="button" class="layui-btn layui-btn-warm layui-btn-small ajax-action" data-action="{:url('admin/guestbook/toggle',['type'=>'cancel_audit'])}"><i class="layui-icon">&#xe63f;</i> 取消审核</button>
+                <button type="button" class="layui-btn layui-btn-danger layui-btn-small ajax-action" data-action="{:url('admin/guestbook/delete')}"><i class="layui-icon">&#xe640;</i> 删除</button>
+                <div class="layui-tab-item layui-show">
+                    <table class="layui-table">
+                        <thead>
+                        <tr>
+                            <th style="width: 15px;"><input type="checkbox" class="check-all"></th>
+                            <th style="width: 30px;">ID</th>
+                            <th>内容</th>
+                            <th>作者</th>
+							<th>操作系统</th>
+							<th>IP</th>
+							<th>状态</th>
+                            <th>发布时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach name="guestbook_list" item="vo"}
+                        <tr>
+                            <td><input type="checkbox" name="ids[]" value="{$vo.id}"></td>
+                            <td>{$vo.id}</td>
+                            <td>{php}echo htmlspecialchars_decode($vo['content']){/php}</td>
+                            <td></td>
+							  <td></td>
+							    <td></td>
+                            <td>{php}echo $vo['status']==1 ? '已审核' : '未审核';{/php}</td>
+                            <td>{$vo.create_time}</td>
+                            <td>
+                                <a href="{:url('admin/guestbook/edit',['id'=>$vo['id']])}" class="layui-btn layui-btn-normal layui-btn-mini"><i class="layui-icon">&#xe611;</i> 回复</a>
+                                <a href="{:url('admin/guestbook/delete',['id'=>$vo['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete"><i class="layui-icon">&#xe640;</i> 删除</a>
+                            </td>
+                        </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                    <!--分页-->
+                    {$guestbook_list->render()}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}

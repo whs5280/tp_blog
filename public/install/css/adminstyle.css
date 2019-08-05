@@ -1,0 +1,321 @@
+@CHARSET "UTF-8";
+/*页面搜索外围背景*/
+.well {
+margin-bottom: 10px;
+padding: 10px;
+border-radius: 0;
+}
+
+/*页面导航更改*/
+.wrap .nav-tabs {
+margin-bottom: 4px;
+}
+.nav-tabs>li>a {
+padding: 6px 12px;
+ border-radius: 0;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+
+    border-left: 1px solid #ddd;
+    border-top-color: transparent;
+    border-right: 1px solid #ccc;
+   
+}
+
+/*列表头部编辑按钮区域*/
+.table-actions{margin-top: 5px; margin-bottom: 5px;padding:0px;}
+
+/*文章列表页*/
+table tr td span{padding: 0 4px;color: #999; margin:0 1px;font-size: 12px;} 
+table tr td span.yes{color: #fff; background-color: #0270DE;}
+
+.article-left-search{height:40px;overflow: hidden;}
+.article-nav{background: #ececec;}
+.article-nav ul{margin: 0;list-style-type: none;padding: 0;}
+.article-nav li{ position:relative;}
+.article-nav a{ display: block;padding: 6px 0;padding-left: 12px;font-size: 14px;color: #666;}
+.article-nav li a:hover{text-decoration: none;color: #000;}
+.article-nav li:hover, .article-nav li.current{background: rgba(0, 0, 0, 0.1)}
+.article-nav li .plus-article{position:absolute;right:0;top: 0;display:none;background: none;padding: 6px 4px;}
+.article-nav li .plus-article:hover{color:#008CFA;}
+.article-nav li:hover .plus-article{display:block;}
+.article-nav a i{padding-right: 2px;}
+.article-right{margin-left: 230px;}
+#article_list{overflow: overlay;}
+.pagination{margin: 5px 0;overflow: hidden;}
+
+/*左侧*/
+.advanced_search{ 
+position:absolute;height: 20PX;
+right: 10PX;
+margin: 7px 0;z-index: 10;
+}
+.advanced_search .as_dropdown{
+width:0;
+height:0px;
+overflow: hidden;
+-webkit-box-shadow: 0 0px 100px #000;
+box-shadow: 0 0px 100px #000;
+-webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
+background: #fff;	
+-webkit-transform: scale(0);
+-ms-transform: scale(0);
+transform: scale(0);
+}
+.advanced_search.open .as_dropdown{
+width:760px;
+height:120px;
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+}
+.advanced_search .as_dropdown #as_close{
+width: 23px;
+height: 23px;
+border-radius: 100%;
+text-align: center;
+margin: 1px;
+background:#EE4856;
+position: absolute;
+right: 0;
+top: 0;
+font-size: 14px;
+color: #fff;
+}
+.advanced_search .as_dropdown #as_close:hover {
+-webkit-filter: grayscale(30%);
+-moz-filter: grayscale(30%);
+-ms-filter: grayscale(30%);
+-o-filter: grayscale(30%);
+filter: grayscale(30%);
+filter: gray;
+}
+
+
+/*编辑表单更改 如：文章编辑，页面编辑，等页面*/
+.row-fluid .table th{
+background-color: #f6f6f6;
+text-align:center;
+}
+.row-fluid .table-bordered>tbody>tr>td input, .row-fluid .table-bordered>tbody>tr>td select, .row-fluid .table-bordered>tbody>tr>td textarea{
+	float: left;
+	width: auto;
+	}
+.row-fluid{overflow: hidden;}
+.form-actions{
+text-align: center;
+margin-bottom: 20px;
+background: #eee;
+padding: 10px;
+}
+.row-fluid .radio input[type=radio], .row-fluid .radio-inline input[type=radio] {
+margin-top: 0;
+margin-left: 0;
+position: static;
+}
+
+/*文章编辑图集区域*/
+.pic-list li {
+margin-bottom: 5px;
+}
+
+/*小按钮下的fa图标*/
+.btn-sm i, .btn-xs i{font-size: 13px;}
+
+
+/*设置编辑界面,填写信息*/
+.form-horizontal .control-group {
+margin-bottom: 0;
+border-bottom: solid #eee 1px;
+background-color: #f6f6f6;
+}
+
+.form-horizontal .control-label {
+float: left;
+width: 160px;
+padding-top: 10px;
+text-align: right;
+}
+.form-horizontal .controls {
+margin-left: 180px;
+padding: 4px 0px;
+padding-left: 10px;
+background-color: #fff;
+min-height: 32px;
+}
+.form-control, .btn, .navbar, .input-group-sm>.form-control, .input-group-sm>.input-group-addon, .input-group-sm>.input-group-btn>.btn{
+	border-radius:0px;}
+/* 开关按钮美化，仿苹果*/
+/* toggle switch css start */
+.switch-btn {position: relative; display: block; vertical-align: top; width: 60px; height: 22px; border-radius: 18px; cursor: pointer;margin-top: 4px}
+.checked-switch {position: absolute; top: 0; left: 0; opacity: 0;}
+.text-switch {background-color: #bbb; border: 1px solid #999; border-radius: inherit; color: #fff; display: block; font-size: 15px; height: inherit; position: relative; text-transform: uppercase;margin: 0;}
+.text-switch:before, .text-switch:after {position: absolute; top: 50%; margin-top: -.5em; line-height: 1; -webkit-transition: inherit; -moz-transition: inherit; -o-transition: inherit; transition: inherit;}
+.text-switch:before {content: attr(data-no); right: 11px;}
+.text-switch:after {content: attr(data-yes); left: 11px; color: #FFFFFF; opacity: 0;}
+.checked-switch:checked ~ .text-switch {background-color: #00af2c; border: 1px solid #068506;}
+.checked-switch:checked ~ .text-switch:before {opacity: 0;}
+.checked-switch:checked ~ .text-switch:after {opacity: 1;}
+.toggle-btn {background: linear-gradient(#eee, #fafafa); border-radius: 100%; height: 20px; left: 1px; position: absolute; top: 1px; width: 20px; text-align: center;padding: 0;margin: 0;}
+.toggle-btn::before {color: #aaaaaa; content: "|||"; display: inline-block; font-size: 12px; letter-spacing: -2px; padding: 4px 0; vertical-align: middle;}
+.checked-switch:checked ~ .toggle-btn {left: 37px;}
+ .text-switch, .toggle-btn {transition: All 0.3s ease; -webkit-transition: All 0.3s ease; -moz-transition: All 0.3s ease; -o-transition: All 0.3s ease;}
+
+/*= add for "no-radius" =*/
+.no-radius, .no-radius .toggle-btn{border-radius: 0;}
+/*= add for "no-radius" end =*/
+
+/*= add for "top-to-bottom" =*/
+.circle-style .toggle-btn::before{background: linear-gradient(#dedede, #cacaca); border-radius: 50%; content: ""; height: 14px; padding: 0; width: 14px;margin-top: 0px;}
+/* add for "top-to-bottom" end */
+/* toggle switch css end */
+/* 开关按钮美化，仿苹果 end */
+
+
+/*多选按钮*/
+.checkbox {
+  padding-left: 20px; }
+  .checkbox label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 5px; }
+    .checkbox label::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      left: 0;
+	  top:2px;
+      margin-left: -20px;
+      border: 1px solid #cccccc;
+      border-radius: 0px;
+      background-color: #fff;
+      -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
+    .checkbox label::after {
+      display: inline-block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top:2px;
+      margin-left: -20px;
+      padding-left: 3px;
+      padding-top: 1px;
+      font-size: 11px;
+      color: #555555; }
+  .checkbox input[type="checkbox"],
+  .checkbox input[type="radio"] {
+    opacity: 0;
+    z-index: 1; }
+    .checkbox input[type="checkbox"]:focus + label::before,
+    .checkbox input[type="radio"]:focus + label::before {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+    .checkbox input[type="checkbox"]:checked + label::after,
+    .checkbox input[type="radio"]:checked + label::after {
+      font-family: "FontAwesome";
+      content: "\f00c"; }
+    .checkbox input[type="checkbox"]:disabled + label,
+    .checkbox input[type="radio"]:disabled + label {
+      opacity: 0.65; }
+      .checkbox input[type="checkbox"]:disabled + label::before,
+      .checkbox input[type="radio"]:disabled + label::before {
+        background-color: #eeeeee;
+        cursor: not-allowed; }
+  .checkbox.checkbox-circle label::before {
+     }
+  .checkbox.checkbox-inline {
+    margin-top: 0; }
+
+
+
+.checkbox-info input[type="checkbox"]:checked + label::before,
+.checkbox-info input[type="radio"]:checked + label::before {
+  background-color: #5bc0de;
+  border-color: #5bc0de; }
+.checkbox-info input[type="checkbox"]:checked + label::after,
+.checkbox-info input[type="radio"]:checked + label::after {
+  color: #fff; }
+
+
+/*单选按钮radio btn*/
+
+.radio input[type="radio"] {
+     opacity: 0; 
+     z-index: 1; 
+}
+.radio {
+  padding-left: 20px; float: left;}
+  .radio label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 5px;
+    }
+    .radio label::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      left: 0;
+          margin-left: -16px;
+      border: 1px solid #cccccc;
+     
+      background-color: #fff;
+      -webkit-transition: border 0.15s ease-in-out;
+      -o-transition: border 0.15s ease-in-out;
+      transition: border 0.15s ease-in-out;
+      top: 2px;
+      }
+
+    .radio label::after {
+      display: inline-block;
+      position: absolute;
+      content: " ";
+      width: 11px;
+      height: 11px;
+      left: 3px;
+      top: 5px;
+      margin-left: -16px;
+      
+      background-color: #5BC0DE;
+      -webkit-transform: scale(0, 0);
+      -ms-transform: scale(0, 0);
+      -o-transform: scale(0, 0);
+      transform: scale(0, 0);
+      -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+      -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+      -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+      transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); }
+  .radio input[type="radio"] {
+    opacity: 0;
+    z-index: 1;
+    }
+    .radio input[type="radio"]:focus + label::before {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+    .radio input[type="radio"]:checked + label::after {
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1); }
+	  
+    .radio input[type="radio"]:disabled + label {
+      opacity: 0.65; }
+      .radio input[type="radio"]:disabled + label::before {
+        cursor: not-allowed; }
+  .radio.radio-inline {
+    margin-top: 0; }
+
+

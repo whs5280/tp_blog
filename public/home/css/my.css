@@ -1,0 +1,64 @@
+﻿* {margin: 0;padding: 0;}
+body {background-image: url(../images/bg.jpg);/*背景图片*/background-attachment: fixed;}
+.demo-nav.fixed {	
+	z-index: 8;
+	background: rgba(255,255,255,.8);/*导航透明度*/				
+	width: 100%;
+	padding: 0;
+	border-bottom: solid 3px #33BBDD;
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+}
+.carousel img {height: 400px;/*轮播高度*/}
+.nav .l_active a{color: #33BBDD;}
+.nav a:hover{color: #33BBDD;}
+
+.articlebox{box-shadow: 0 0 10px 7px rgba(218, 218, 218, 0.9);}
+.icourse-course li{
+  position: relative;
+  float: left;
+  width: 280px;
+  margin: 10px;
+  height: 200px;
+  background: #f7faf9;
+  background: #f7faf9\0/;
+  border-bottom: 2px solid #f7faf9\0/;
+  border-radius: 0 0 1px 1px;
+  box-shadow: 0 1px 2px #c5c5c5;
+  transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+}
+.icourse-img{position: relative;overflow: hidden;}
+.icourse-img img{transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;-o-transition: .5s;line-height: 1em;}
+.icourse-course li:hover{ border-bottom: 2px solid #dae0e5\0/;box-shadow: 0 2px 8px #bbb;}
+.icourse-course li:hover img{transform: scale(1.2);-webkit-transform: scale(1.2);}
+.detail_a {padding-top: 15px;padding-left: 20px;line-height: 20px;margin-bottom: 15px;}
+.a_tuijian {float: right;margin-right: 20px;}
+.look-all {position: relative;float: right;margin-right: 20px;margin-top: -30px;margin-bottom: 20px;}
+/*.remark {font-size: 16px;margin-left: 210px;top: 10;padding: 15px; line-height: 30px;}*/
+.remark {font-size: 16px; padding-top:5px; padding-left:25px; padding-right:25px; line-height: 30px;}
+.write {display: block;width: 100%;margin-left: 10px;text-indent: 0.4em;font-size: 13px;color: #0a8;margin-top: 20px;float: left;}
+.a_title {font-size: 22px;text-align: center;margin-bottom: 25px;padding-top: 20px;}
+.a-write {width: 100%;height: auto;font-size: 13px;text-align: center;border: 1px dashed #999999;line-height: 25px;color: #31343b;}
+.a-content {margin-top: 20px;padding: 10px;color: #31343b;font-size: 16px;}
+.tag-ul {padding: 10px;}
+.tag-ul a {margin-bottom: 4px;}
+.links a {margin-bottom: 5px;}
+.tool a {width: 180px;text-align: center;margin-left: 5px;margin-bottom: 8px;}
+.img-small img {width: 100px;height: 88px;border: 1px solid #D0D0D0;}
+.said_time {display: block;width: 100%;font-size: 13px;color: #0a8;margin-bottom: 20px;float: left;}
+.said_img img {margin-left: 20px;margin-right: 20px;margin-bottom: 20px;float: left;}
+.said_c {font-size: 16px;margin-left: 80px;top: 10;padding: 15px;line-height: 25px;}
+.liuyan_a {padding-top: 15px;padding-left: 20px;line-height: 20px;margin-bottom: 15px;}
+.f_liuyan{margin-left: 70px;}
+.liuyan_t {font-size: 14px;color: #0a8;	}
+.liuyan_c {font-size: 16px;margin-left: 80px;top: 10;padding: 15px;line-height: 25px;}
+.QQfriends img{margin-bottom: 10px;margin-right: 10px;}
+.foot{height: 100px;color: #666767;margin-top: 100px;}
+.foot a{color: #666767;}
+.foot a:hover{color: #00AA88;}
+.about{height: auto;float: left;display: block;font-size: 16px;}
+.about p,.about-love p{line-height: 30px;}
+.about-love{display: block;font-size: 16px;}

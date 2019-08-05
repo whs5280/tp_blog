@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>		
+	<title>{$getcategory.name}-{$site_config.site_title}</title>
+	<meta name="keywords" content="{$getcategory.name}"/>
+	<meta name="description" content="{$getcategory.content}"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="__public__css/lunbo.css" />
+	<link rel="stylesheet" href="__public__css/pintuer.css">
+	<link rel="stylesheet" href="__public__css/my.css">
+	<link rel="stylesheet" href="__public__css/page_css.css">	
+	<link rel="stylesheet" href="__public__css/gotop.css" />
+	<script src="__public__js/jquery.js"></script>
+	<script src="__public__js/pintuer.js"></script>
+	<script src="__public__js/respond.js"></script>
+	<script src="__public__layer/layer.js"></script>
+	<script src="__public__js/gotop.js" ></script>
+	<script src="__public__js/jquery.touchSlider.js"></script>
+</head>
+	<body>
+{include file="/header/header"} 
+		<div class="container">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="/" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">{$getcategory.name}</a></li>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+						
+						 {foreach name="article_list" item="vo" empty="暂时没有数据<br />"}
+							<div class="clearfix articlebox">
+									<div class="detail_a">
+									    
+									{php}echo $vo['tag']==1 ? '<span class="tag bg-dot">原创</span>' : '<span class="tag bg-green">转载</span>';{/php}&nbsp;&nbsp;
+									<a href="{:url('article/index','id='.$vo['id'])}" style="font-size: 16px;">{$vo.title}</a>
+	                                {php}echo $vo['is_good']==1 ? '<div class="a_tuijian"><img src="__public__images/tuijian.gif" style="width:70px" /></div>' : '';{/php}
+									</div>
+									<div class="article">
+
+										<ul class="icourse-course">
+											 <li>
+									                <a href="{:url('article/index','id='.$vo['id'])}">
+											            <div class="icourse-img">
+
+																{if condition="strtoupper($vo['thumb']) neq ''"}<img src="{$vo.thumb}" onerror="this.src='__public__images/default_thumb.png'" class="img" title="" width="100%" height="200px" />
+{else /}<img src="__public__images/default_thumb.png" width="100%" height="200px"/>
+{/if}
+															
+											            </div>
+									       
+									                </a>
+									           </li>										
+
+										</ul>
+
+										<div class="remark">
+										{$vo.introduction}					</div>
+									</div>
+	
+									<div class="write">
+										<span class="icon-paper-plane"></span>&nbsp;{$vo.publish_time} &nbsp;&nbsp;作者：{$vo.author} &nbsp;&nbsp;分类：[&nbsp;{$getcategoryName[$vo['cid']]}&nbsp;]<span class="hidden-xs">&nbsp;&nbsp;点击：[&nbsp;{$vo.reading}&nbsp;]</span>
+									</div>
+									<div class="look-all">
+										<a href="{:url('article/index','id='.$vo['id'])}" class="button border-blue" role="button">查看全部</a>
+									</div>
+								</div>
+								<br />
+							    {/foreach}	
+												
+							<br />							
+						</div>						
+						<hr />
+						<div class="pages" style=" text-align: right;">
+							 {$article_list->render()}						</div>
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>				
+				
+{include file="/right/right"} 	
+			</div>
+		</div>	
+
+{include file="/footer/footer"} 		
+
+	</body>
+</html>

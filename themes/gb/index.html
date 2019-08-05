@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>		
+	<title>留言-{$site_config.site_title}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="__public__css/lunbo.css" />
+	<link rel="stylesheet" href="__public__css/pintuer.css">
+	<link rel="stylesheet" href="__public__css/my.css">
+	<link rel="stylesheet" href="__public__css/page_css.css">	
+	<link rel="stylesheet" href="__public__css/gotop.css" />
+	<script src="__public__js/jquery.js"></script>
+	<script src="__public__js/pintuer.js"></script>
+	<script src="__public__js/respond.js"></script>
+	<script src="__public__layer/layer.js"></script>
+	<script src="__public__js/gotop.js" ></script>
+	<script src="__public__js/jquery.touchSlider.js"></script>
+</head>
+	<body>
+{include file="/header/header"} 
+		<div class="container">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="/" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">留言板</a></li>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+						
+						{foreach name="tell_list" item="vo" empty="暂时没有数据<br />"}
+							<div class="clearfix articlebox">
+									<div class="liuyan_a">
+									</div>
+									<div class="said_img">
+									
+									{if condition="strtoupper($vo['headimgurl']) neq ''"}<img src="{$vo.headimgurl}" class="radius-circle" width="60px" height="60px" />
+{else /}<img src="__public__images/default_thumb.png" class="radius-circle tips" width="60px" height="60px" />
+{/if}
+										
+										<div class="liuyan_t">
+											<span class="icon-user"></span>&nbsp;&nbsp;<a>{$vo.nickname}</a>&nbsp;&nbsp;</span>
+											<span class="icon-paper-plane"></span>&nbsp;{$vo.create_time}&nbsp;&nbsp;</span>
+											<span class="tag bg-dot">{$vo.os}</span>&nbsp;&nbsp;<span class="icon-map-marker"></span>&nbsp;{$vo.position}										</div>
+										<div class="liuyan_c">
+										{php}echo htmlspecialchars_decode($vo['content']){/php}	</div>
+
+									</div>
+									</div>
+								<br />
+								
+								 {/foreach}	
+								
+								<br />							<br />
+								
+								<div class="pages" style=" text-align: right;">
+							 {$tell_list->render()}	</div>
+					
+							<br />
+							<hr />
+
+							<div class="panel border-sub">
+								<div class="panel-head border-sub bg-sub">
+									<h3>留  言</h3>
+								</div>
+								<div class="panel-body">
+									<div class="panel-body">
+										<form action="/index.php/index/gb/add" name="signupForm" id="signupForm" method="post" class="form form-block">						
+											<div class="form-group">
+												<div class="field">
+													<div class="input-group">
+														<span class="addon">昵称</span>
+													<input type="text" class="input" id="username" name="username" value="{:session('user_nickname')}" readonly="readonly" placeholder="请输入昵称" />
+												</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="field">
+													<div class="input-group">
+														<span class="addon">邮箱</span>
+													<input type="text" class="input"  id="email" name="email" placeholder="请输入正确的邮箱地址" />
+												</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="field">
+													<textarea class="input" rows="5" name="content" id="content" cols="50" placeholder="说点什么吧...."></textarea>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="field">
+													<div class="input-group">
+														<span class="addon">验证码</span>
+													<input type="text" style="width: 300px;" class="input" id="txt_check" name="txt_check" placeholder="请输入右侧验证码" />
+													<img style="margin-top: -33px;margin-left: 50%;display: block;border: 1px solid #C7C7C7;" class="img" src="{:captcha_src()}" onClick="this.src = this.src + '?' + Math.random();" title="看不清楚?点击刷新验证码?">
+												</div></div>
+											</div>
+											<div class="form-button">
+										
+												<button class="button bg-blue button-big button-block" id="btn-submit" >
+													提 交</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<br />
+						</div>
+						<hr />
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>
+{include file="/right/right"} 	
+			</div>
+		</div>
+
+		<script type="text/javascript">
+	
+		$(function(){
+
+		    $('#btn-submit').click(function(){
+		    	var node ="{:session('user_nickname')}";
+
+		     	if( node =='' || node == null){ 
+				 layer.alert("为防止恶意刷屏，请使用QQ登录后文明留言!",{icon: 5,}); 
+				 	return false;
+				}
+				if( '' == $.trim($('#username').val())){
+					layer.alert('昵称不能为空', {icon: 5});
+				return false;
+				}
+				if( '' == $.trim($('#email').val())){
+					layer.alert('邮箱地址不能为空', {icon: 5});
+					return false;
+				}
+				if( '' == $.trim($('#content').val())){
+					layer.alert('您还没说点什么呢！', {icon: 5});
+					return false;
+				}
+
+				 return true;
+		    });		    
+		})
+
+	</script>
+
+{include file="/footer/footer"} 		
+
+	</body>
+</html>

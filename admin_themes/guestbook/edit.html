@@ -1,0 +1,49 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/guestbook/index')}">留言管理</a></li>
+            <li class="layui-this">回复留言</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form form-container" action="{:url('admin/guestbook/update')}" method="post">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">留言内容</label>
+                        <div class="layui-input-block">	
+							  
+							  <textarea name="bookcontent" lay-verify="bookcontent" placeholder="" class="layui-textarea">{$guestbook.content}</textarea>
+                        </div>
+                    </div>
+					
+					    <div class="layui-form-item">
+                        <label class="layui-form-label">回复内容</label>
+                        <div class="layui-input-block">	
+							 <textarea name="replycontent" lay-verify="replycontent" placeholder="" class="layui-textarea">{$guestbook.replycontent}</textarea>
+                        </div>
+                    </div>
+              
+              
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="status" value="1" title="启用" {if condition="$guestbook.status==1"} checked="checked"{/if}>
+                            <input type="radio" name="status" value="0" title="禁用" {if condition="$guestbook.status==0"} checked="checked"{/if}>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="hidden" name="id" value="{$guestbook.id}">
+                            <button class="layui-btn" lay-submit lay-filter="*">更新</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

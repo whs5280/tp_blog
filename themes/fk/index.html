@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>		
+	<title>访客-{$site_config.site_title}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="__public__css/lunbo.css" />
+	<link rel="stylesheet" href="__public__css/pintuer.css">
+	<link rel="stylesheet" href="__public__css/my.css">
+	<link rel="stylesheet" href="__public__css/page_css.css">	
+	<link rel="stylesheet" href="__public__css/gotop.css" />
+	<script src="__public__js/jquery.js"></script>
+	<script src="__public__js/pintuer.js"></script>
+	<script src="__public__js/respond.js"></script>
+	<script src="__public__layer/layer.js"></script>
+	<script src="__public__js/gotop.js" ></script>
+	<script src="__public__js/jquery.touchSlider.js"></script>
+</head>
+	<body>
+{include file="/header/header"} 
+		<div class="container">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="/" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">访客</a></li>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+							<h4>最近QQ访客</h4>
+							此处为通过QQ登陆本网站<span style="color:red">(已有{$login_number}人登录本站)</span><hr>
+				            <div class="friends">
+				                <div class="QQfriends">		
+								 {foreach name="userlogin_list" item="vo" empty="暂时没有数据"}	                    
+			                        <img src="{$vo.headimgurl}" title="{$vo.nickname} 最近登陆{$vo.logincount}次" class="radius-circle" width="60px" height="60px">	 
+									    {/foreach}	                  
+				                </div>
+				            </div>							
+							<br />							
+						</div>						
+						<hr />
+						<div class="pages" style=" text-align: right;">
+						{$userlogin_list->render()}</div>
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>				
+{include file="/right/right"} 	
+			</div>
+		</div>	
+		{include file="/footer/footer"} 	
+
+	</body>
+</html>

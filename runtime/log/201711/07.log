@@ -1,0 +1,312 @@
+[ 2017-11-07T18:34:14+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.demo.com/ [运行时间：0.073004s][吞吐率：13.70req/s] [内存消耗：2,104.18kb] [文件加载：50]
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+---------------------------------------------------------------
+[ 2017-11-07T19:59:36+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.demo.com/ [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：2,104.16kb] [文件加载：50]
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+---------------------------------------------------------------
+[ 2017-11-07T20:01:14+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.demo.com/ [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：2,104.16kb] [文件加载：50]
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+---------------------------------------------------------------
+[ 2017-11-07T20:02:06+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.demo.com/ [运行时间：0.047003s][吞吐率：21.28req/s] [内存消耗：2,160.90kb] [文件加载：53]
+[ info ] [ LANG ] D:\WWW\demo\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.demo.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'jieqiVisitInfo=jieqiUserLogin%3D1508141771%2CjieqiUserId%3D4; L5zn_2132_saltkey=iRkc7CVR; AHgK_2132_saltkey=LAdD3ADa; AHgK_2132_lastvisit=1508140827; AHgK_2132_ulastactivity=edc5MJ0xxF40vzwOZ8Qx6TAqRoOwPkjLasike%2F7n8KDki2RtB4xg; AHgK_2132_nofavfid=1; ebak_loginlangid=1; UM_distinctid=15f46097f8b44c-0c7b488e9a1e1e8-43574130-1fa400-15f46097f8c408; CNZZDATA5914508=cnzz_eid%3D2093163175-1508707372-%26ntime%3D1508707372; cu3_username=sucaihuo; CNZZDATA1256815981=484042990-1509578571-%7C1509578571; Hm_lvt_4e28b5978c20aafe44b9f44964e763bc=1509578564; pgv_pvi=3828147200',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[D:\WWW\demo\thinkphp\library\think\db\Connection.php:282]
+
+---------------------------------------------------------------
+[ 2017-11-07T20:02:42+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.demo.com/ [运行时间：1.049060s][吞吐率：0.95req/s] [内存消耗：2,160.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\WWW\demo\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.demo.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'jieqiVisitInfo=jieqiUserLogin%3D1508141771%2CjieqiUserId%3D4; L5zn_2132_saltkey=iRkc7CVR; AHgK_2132_saltkey=LAdD3ADa; AHgK_2132_lastvisit=1508140827; AHgK_2132_ulastactivity=edc5MJ0xxF40vzwOZ8Qx6TAqRoOwPkjLasike%2F7n8KDki2RtB4xg; AHgK_2132_nofavfid=1; ebak_loginlangid=1; UM_distinctid=15f46097f8b44c-0c7b488e9a1e1e8-43574130-1fa400-15f46097f8c408; CNZZDATA5914508=cnzz_eid%3D2093163175-1508707372-%26ntime%3D1508707372; cu3_username=sucaihuo; CNZZDATA1256815981=484042990-1509578571-%7C1509578571; Hm_lvt_4e28b5978c20aafe44b9f44964e763bc=1509578564; pgv_pvi=3828147200; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1049]SQLSTATE[HY000] [1049] Unknown database 'demo_511'[D:\WWW\demo\thinkphp\library\think\db\Connection.php:282]
+
+---------------------------------------------------------------
+[ 2017-11-07T20:03:38+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.demo.com/ [运行时间：1.246071s][吞吐率：0.80req/s] [内存消耗：2,835.46kb] [文件加载：62]
+[ info ] [ LANG ] D:\WWW\demo\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.demo.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'jieqiVisitInfo=jieqiUserLogin%3D1508141771%2CjieqiUserId%3D4; L5zn_2132_saltkey=iRkc7CVR; AHgK_2132_saltkey=LAdD3ADa; AHgK_2132_lastvisit=1508140827; AHgK_2132_ulastactivity=edc5MJ0xxF40vzwOZ8Qx6TAqRoOwPkjLasike%2F7n8KDki2RtB4xg; AHgK_2132_nofavfid=1; ebak_loginlangid=1; UM_distinctid=15f46097f8b44c-0c7b488e9a1e1e8-43574130-1fa400-15f46097f8c408; CNZZDATA5914508=cnzz_eid%3D2093163175-1508707372-%26ntime%3D1508707372; cu3_username=sucaihuo; CNZZDATA1256815981=484042990-1509578571-%7C1509578571; Hm_lvt_4e28b5978c20aafe44b9f44964e763bc=1509578564; pgv_pvi=3828147200; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\demo\application\index\controller\Index.php ]
+[ info ] [ VIEW ] themes\index\index.html [ array (
+  0 => 'site_config',
+  1 => 'banner',
+  2 => 'category',
+  3 => 'links',
+  4 => 'tags',
+  5 => 'randarticle',
+  6 => 'htorticle',
+  7 => 'messageinfo',
+  8 => 'nav',
+  9 => 'currenturl',
+  10 => 'toparticle',
+  11 => 'category_level_list',
+  12 => 'article_list',
+  13 => 'getcategoryName',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.011058s ] mysql:dbname=demo_511;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_system` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `think_system` WHERE  `name` = 'site_config' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_advertising` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_advertising` WHERE  `status` = 1 ORDER BY sort asc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_category` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_category` WHERE  `type` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_links` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_links` WHERE  `status` = 1 LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_tags` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_tags` ORDER BY num desc LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_article` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`introduction`,`thumb` FROM `think_article` WHERE  `status` = 1 ORDER BY rand() LIMIT 3 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`introduction`,`thumb` FROM `think_article` WHERE  `status` = 1 ORDER BY reading desc LIMIT 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`cid`,`introduction`,`keywords`,`tag`,`is_top`,`is_good`,`photo`,`thumb`,`author`,`reading`,`status`,`publish_time`,`sort` FROM `think_article` WHERE  `status` = 1  AND `is_top` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_guestbook` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_guestbook` WHERE  `status` = 1 LIMIT 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_nav` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_nav` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_category` ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_article` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`cid`,`introduction`,`tag`,`is_good`,`thumb`,`author`,`reading`,`status`,`publish_time`,`sort` FROM `think_article` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `think_category` [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-11-07T20:03:41+08:00 ] 127.0.0.1 127.0.0.1 GET /fk
+[ log ] www.demo.com/fk [运行时间：1.246071s][吞吐率：0.80req/s] [内存消耗：2,754.10kb] [文件加载：59]
+[ info ] [ LANG ] D:\WWW\demo\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'fk',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.demo.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.demo.com/',
+  'cookie' => 'jieqiVisitInfo=jieqiUserLogin%3D1508141771%2CjieqiUserId%3D4; L5zn_2132_saltkey=iRkc7CVR; AHgK_2132_saltkey=LAdD3ADa; AHgK_2132_lastvisit=1508140827; AHgK_2132_ulastactivity=edc5MJ0xxF40vzwOZ8Qx6TAqRoOwPkjLasike%2F7n8KDki2RtB4xg; AHgK_2132_nofavfid=1; ebak_loginlangid=1; UM_distinctid=15f46097f8b44c-0c7b488e9a1e1e8-43574130-1fa400-15f46097f8c408; CNZZDATA5914508=cnzz_eid%3D2093163175-1508707372-%26ntime%3D1508707372; cu3_username=sucaihuo; CNZZDATA1256815981=484042990-1509578571-%7C1509578571; Hm_lvt_4e28b5978c20aafe44b9f44964e763bc=1509578564; pgv_pvi=3828147200; thinkphp_show_page_trace=0|0; PHPSESSID=81bcskr6hbdlm1f5jb086fadm7',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/fk' => '',
+  'name' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Fk->index[ D:\WWW\demo\application\index\controller\Fk.php ]
+[ info ] [ VIEW ] themes\fk\index.html [ array (
+  0 => 'site_config',
+  1 => 'banner',
+  2 => 'category',
+  3 => 'links',
+  4 => 'tags',
+  5 => 'randarticle',
+  6 => 'htorticle',
+  7 => 'messageinfo',
+  8 => 'nav',
+  9 => 'currenturl',
+  10 => 'toparticle',
+  11 => 'login_number',
+  12 => 'userlogin_list',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.002058s ] mysql:dbname=demo_511;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_system` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `value` FROM `think_system` WHERE  `name` = 'site_config' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_advertising` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_advertising` WHERE  `status` = 1 ORDER BY sort asc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_category` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_category` WHERE  `type` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_links` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_links` WHERE  `status` = 1 LIMIT 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_tags` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_tags` ORDER BY num desc LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_article` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`introduction`,`thumb` FROM `think_article` WHERE  `status` = 1 ORDER BY rand() LIMIT 3 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`introduction`,`thumb` FROM `think_article` WHERE  `status` = 1 ORDER BY reading desc LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`cid`,`introduction`,`keywords`,`tag`,`is_top`,`is_good`,`photo`,`thumb`,`author`,`reading`,`status`,`publish_time`,`sort` FROM `think_article` WHERE  `status` = 1  AND `is_top` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_guestbook` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_guestbook` WHERE  `status` = 1 LIMIT 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_nav` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_nav` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `think_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_user` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,100 [ RunTime:0.001001s ]
+
+---------------------------------------------------------------
+[ 2017-11-07T20:03:45+08:00 ] 127.0.0.1 127.0.0.1 GET /fk
+[ log ] www.demo.com/fk [运行时间：1.224070s][吞吐率：0.82req/s] [内存消耗：2,581.95kb] [文件加载：57]
+[ info ] [ LANG ] D:\WWW\demo\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'fk',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.demo.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.demo.com/',
+  'cookie' => 'jieqiVisitInfo=jieqiUserLogin%3D1508141771%2CjieqiUserId%3D4; L5zn_2132_saltkey=iRkc7CVR; AHgK_2132_saltkey=LAdD3ADa; AHgK_2132_lastvisit=1508140827; AHgK_2132_ulastactivity=edc5MJ0xxF40vzwOZ8Qx6TAqRoOwPkjLasike%2F7n8KDki2RtB4xg; AHgK_2132_nofavfid=1; ebak_loginlangid=1; UM_distinctid=15f46097f8b44c-0c7b488e9a1e1e8-43574130-1fa400-15f46097f8c408; CNZZDATA5914508=cnzz_eid%3D2093163175-1508707372-%26ntime%3D1508707372; cu3_username=sucaihuo; CNZZDATA1256815981=484042990-1509578571-%7C1509578571; Hm_lvt_4e28b5978c20aafe44b9f44964e763bc=1509578564; pgv_pvi=3828147200; thinkphp_show_page_trace=0|0; PHPSESSID=81bcskr6hbdlm1f5jb086fadm7',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/fk' => '',
+  'name' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Fk->index[ D:\WWW\demo\application\index\controller\Fk.php ]
+[ info ] [ VIEW ] themes\fk\index.html [ array (
+  0 => 'site_config',
+  1 => 'banner',
+  2 => 'category',
+  3 => 'links',
+  4 => 'tags',
+  5 => 'randarticle',
+  6 => 'htorticle',
+  7 => 'messageinfo',
+  8 => 'nav',
+  9 => 'currenturl',
+  10 => 'toparticle',
+  11 => 'login_number',
+  12 => 'userlogin_list',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.997057s ] mysql:dbname=demo_511;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_system` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `think_system` WHERE  `name` = 'site_config' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_advertising` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_advertising` WHERE  `status` = 1 ORDER BY sort asc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_category` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_category` WHERE  `type` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_links` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_links` WHERE  `status` = 1 LIMIT 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_tags` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_tags` ORDER BY num desc LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_article` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`introduction`,`thumb` FROM `think_article` WHERE  `status` = 1 ORDER BY rand() LIMIT 3 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`introduction`,`thumb` FROM `think_article` WHERE  `status` = 1 ORDER BY reading desc LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`cid`,`introduction`,`keywords`,`tag`,`is_top`,`is_good`,`photo`,`thumb`,`author`,`reading`,`status`,`publish_time`,`sort` FROM `think_article` WHERE  `status` = 1  AND `is_top` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_guestbook` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_guestbook` WHERE  `status` = 1 LIMIT 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_nav` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `think_nav` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `think_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_user` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,100 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------

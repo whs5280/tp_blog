@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>		
+	<title>{$article.title}-{$site_config.site_title}</title>
+	<meta name="keywords" content="{$article.keywords}"/>
+	<meta name="description" content="{$article.introduction}"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="__public__css/lunbo.css" />
+	<link rel="stylesheet" href="__public__css/pintuer.css">
+	<link rel="stylesheet" href="__public__css/my.css">
+	<link rel="stylesheet" href="__public__css/page_css.css">	
+	<link rel="stylesheet" href="__public__css/gotop.css" />
+	<script src="__public__js/jquery.js"></script>
+	<script src="__public__js/pintuer.js"></script>
+	<script src="__public__js/respond.js"></script>
+	<script src="__public__layer/layer.js"></script>
+	<script src="__public__js/gotop.js" ></script>
+	<script src="__public__js/jquery.touchSlider.js"></script>
+</head>
+	<body>
+{include file="/header/header"} 
+		<div class="container">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="/" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">文章正文</a></li>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+							<div class="a_title">{$article.title}</div>
+							<div class="a-write">时间：&nbsp;{$article.publish_time}&nbsp;&nbsp;作者：<a>{$article.author}</a>&nbsp;&nbsp;阅读：（{$article.reading}）</div>
+							<div class="a-content"  style="width:700px">
+				
+				      {php}echo htmlspecialchars_decode($article['content']){/php}
+						
+											</div>
+							<div class="a-write hidden-xs">
+								本文为原创，转载请注明出处:&nbsp;&nbsp;<a>{php}echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']{/php}</a>
+									<br>								发表自：&nbsp;{$getcategoryName[$article['cid']]}&nbsp;&nbsp;地址：{$article.position}&nbsp;&nbsp;关键词：&nbsp;{$article.keywords}&nbsp;&nbsp;
+							</div>
+							<br />
+					
+						</div>
+						<hr />
+						<div class="a-up">
+							<p>上一篇：{$prevs.title? '<a href="'.url('article/index','id='.$prevs['id']).'">'.$prevs.title.'</a>' : '没有了'}</p>
+						</div>
+						<div class="a-down">
+							<p>下一篇：{$nexts.title? '<a href="'.url('article/index','id='.$nexts['id']).'">'.$nexts.title.'</a>' : '没有了'}</p>
+						</div>
+						<div class="pages" style=" text-align: right;">
+													</div>
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>
+				{include file="/right/right"} 
+			</div>
+		</div>
+		{include file="/footer/footer"} 
+
+	</body>
+
+</html>

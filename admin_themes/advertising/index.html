@@ -1,0 +1,64 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">广告管理</li>
+            <li class=""><a href="{:url('admin/advertising/add')}">添加广告</a></li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+
+                <form class="layui-form layui-form-pane" action="{:url('admin/advertising/index')}" method="get">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">关键词</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="keyword" value="{$keyword}" placeholder="请输入关键词" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn"><i class="layui-icon">&#xe615;</i> 搜索</button>
+                    </div>
+                </form>
+                <hr>
+
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th style="width: 30px;">ID</th>
+						<th>排序</th>
+                        <th>广告名称</th>
+                        <th>广告地址</th>
+						<th>广告图片</th>
+                        <th>状态</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach name="advertising_list" item="vo"}
+                    <tr>
+                        <td>{$vo.id}</td>
+						<td>{$vo.sort}</td>
+                        <td>{$vo.adname}</td>
+                        <td>{$vo.adurl}</td>
+                        <td><img src="{$vo.adpic}" style="width:100px; height:30px;"/></td>
+                        <td>{php}echo $vo['status']==1 ? '启用' : '禁用';{/php}</td>
+                        <td>{$vo.create_time}</td>
+                      
+                        <td>
+                            <a href="{:url('admin/advertising/edit',['id'=>$vo['id']])}" class="layui-btn layui-btn-normal layui-btn-mini"><i class="layui-icon">&#xe642;</i> 编辑</a>
+                            <a href="{:url('admin/advertising/delete',['id'=>$vo['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete"><i class="layui-icon">&#xe640;</i> 删除</a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+                <!--分页-->
+                {$advertising_list->render()}
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

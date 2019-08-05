@@ -1,0 +1,82 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+ <p class="site-tips"><i class="layui-icon">&#xe612;</i> {:session('admin_name')}，感谢你选择  {$site_config.site_title} 后台管理</p>
+ <ul class="site-doc-color">
+      <li style="background-color: #F7B824;">
+        <p><i class="layui-icon" style="font-size:30px;">&#xe630;</i>  <p>
+        <p>已审核：{$approvedarticle_number}&nbsp;<i class="layui-icon">&#xe602;</i>&nbsp;未审核：{$notauditarticle_number}</p>
+      </li>
+      <li style="background-color: #FF5722;">
+        <p><i class="layui-icon" style="font-size:30px;">&#xe64c;</i>  <p>
+        <p>链接数：{$links_number}</p>
+      </li>
+      <li style="background-color: #01AAED;">
+            <p><i class="layui-icon" style="font-size:30px;">&#xe639;</i>  <p>
+        <p>分类数：{$tell_number}</p>
+      </li>
+      <li style="background-color: #2F4056;">
+            <p><i class="layui-icon" style="font-size:30px;">&#xe63a;</i>  <p>
+        <p tips>留言数：{$guestbook_number}</p>
+      </li>
+    </ul>
+   <div class="clr"></div>
+    
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this"><i class="layui-icon">&#xe614;</i> 系统信息</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <table class="layui-table">
+				  <tr>
+                        <td>版本</td>
+                        <td style="font-weight:bold;"><i class="layui-icon">&#xe639;</i> {$config.version} {$new_ver}</td>
+                    </tr>
+                    <tr>
+                      <td>官方网址</td>
+                      <td>&nbsp;</td>
+                    </tr>
+					    <tr>
+                      <td>BUG反馈</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 400px;">网站域名</td>
+                        <td>{$config.url}</td>
+                    </tr>
+                    <tr>
+                        <td>网站目录</td>
+                        <td>{$config.document_root}</td>
+                    </tr>
+                    <tr>
+                        <td>服务器操作系统</td>
+                        <td>{$config.server_os}</td>
+                    </tr>
+                    <tr>
+                        <td>服务器端口</td>
+                        <td>{$config.server_port}</td>
+                    </tr>
+                    <tr>
+                        <td>服务器环境</td>
+                        <td>{$config.server_soft}</td>
+                    </tr>
+                    <tr>
+                        <td>PHP版本</td>
+                        <td>{$config.php_version}</td>
+                    </tr>
+                    <tr>
+                        <td>MySQL版本</td>
+                        <td>{$config.mysql_version}</td>
+                    </tr>
+                    <tr>
+                        <td>最大上传限制</td>
+                        <td>{$config.max_upload_size}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{/block}
